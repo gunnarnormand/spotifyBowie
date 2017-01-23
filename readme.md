@@ -107,4 +107,4 @@ After that, leave the terminal window open, and every time you save a code file,
 - Check JS files for errors
 - Refresh the Browser
 
-Now you can just work in the index.html file, the css (or later, scss) files, the js files, and Gulp will error check them and refresh the browser every time you save. Frickin' magic right?
+Now you can just work in the index.html file, the css (or later, scss) files, the js files, and Gulp will error check them and refresh the browser every time you save. Frickin' magic right?# spotifyBowie

@@ -1,58 +1,125 @@
 /* 
 ==============================================
-CONTENT:	Project Name Here
-AUTHOR:		Your Name Here
+CONTENT:	Spotify Bowie 
+AUTHOR:		Gunnar Normand
 ==============================================
 
 TABLE OF CONTENTS:
 
-1. Main Layout
-2. Content
+1. Imports
+2. Main Layout
+3. Content
 
 ==============================================
 */
 
 
+/* 1. Imports ================================= */
 
-/* 1. Main Layout ================================= */
+@import 'partials/fonts';
+@import 'partials/variables';
+@import 'partials/typography';
 
-* {
-	box-sizing: border-box;
-}
+/* 2. Main Layout ================================= */
 
+html,
 body {
-	background: #ccc;
+  background: rgba(118,85,170, 0); 
+  font-family: 'Futura-Medi', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; 
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  height: 100%;
 }
 
-
-.content {
-	background: white;
-	padding: 30px;
-	font-family: sans-serif;
-	width: 90%;
-	max-width: 600px;
-	margin: 30px auto;
-	border-radius: 10px;
+video, 
+iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
 }
 
-
-
-/* 2. Content ================================= */
-
-.logo {
-	width: 60px;
+svg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 }
+
+section {
+  height: 100vh;
+  // width: 100vw;
+    width: 3000px; /* relative to parent -> 25% of 400% = 100% of window width */
+    float: left;
+}
+
+/* 3. Content ================================= */
+
+#main-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+}
+
+#slide-wrap {
+  width: 500%; /* to contain 5 panels, each with 100% of window width */
+  height: 100%;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+}
+
+#panel--one {
+  background: url('../img/background.png');
+  background-size: auto auto;
+}
+
+#panel--one-second {
+  background: url('../img/background1.png');
+  background-size: auto auto;
+  baclground-repeat: none;
+}
+
+#panel--two {
+  background: url('../img/background2.png');
+  background-size: auto auto;
+}
+
+#panel--three {
+  background: url('../img/background3.png');
+  background-size: auto auto;
+}
+
+#panel--four {
+  background: url('../img/background4.png');
+  background-size: auto auto;
+}
+
 
 h1 {
-	font-weight: 700;
-	font-size: 22pt;
-	margin: 15px 0;
+  color: white;
 }
 
-p {
-	color: #777;
-	// margin: 10px 0;
-	line-height: 140%;
+#start {
+  
+}
+
+#end {
+  opacity: 0.2;
+}
+
+
+
+@media #{$larger-than-ipad-breakpoint} {
+	
 }
 
 
