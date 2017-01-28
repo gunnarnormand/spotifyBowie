@@ -3,11 +3,12 @@ console.log("main.js");
 $(document).ready(function(){
 
 		MorphSVGPlugin.convertToPath("#start");
+		// findShapeIndex("#start", "#end");
 	
 		var controller = new ScrollMagic.Controller();
 	
 		var wipeAnimation = new TimelineMax()
-		 	// .to("#start", 1, {morphSVG:{shape:"#end", shapeIndex:28}, ease: Elastic.easeOut.config(1, 0.3)})
+		 	.to("#start", 3, {morphSVG:{shape:"#end", shapeIndex:16}, ease: Elastic.easeOut.config(1, 0.3)})
 		 	
 			
 

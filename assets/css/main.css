@@ -14,8 +14,24 @@ TABLE OF CONTENTS:
 */
 /* 1. Imports ================================= */
 @font-face {
+  font-family: 'Futura-Bold';
+  src: url("../fonts/FuturaTOT-Bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Futura-Demi';
+  src: url("../fonts/FuturaTOT-Demi.otf") format("opentype"); }
+
+@font-face {
   font-family: 'Futura-Medi';
   src: url("../fonts/FuturaTOT-Medi.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ApexSerif-Book';
+  src: url("../fonts/ApexSerif_Book.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url("../fonts/FuturaTOT-Bold.otf") format("opentype"); }
 
 .clearfix:before,
 .clearfix:after {
@@ -79,7 +95,7 @@ a {
 html,
 body {
   background: rgba(118, 85, 170, 0);
-  font-family: 'Futura-Medi', Arial, sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
