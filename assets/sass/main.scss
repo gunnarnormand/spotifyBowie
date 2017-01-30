@@ -24,8 +24,6 @@ TABLE OF CONTENTS:
 
 html,
 body {
-  background: rgba(118,85,170, 0); 
-  font-family: sans-serif;
   -webkit-font-smoothing: antialiased; 
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -42,16 +40,28 @@ iframe {
   z-index: -1;
 }
 
-svg {
+// svg {
+//   position: absolute;
+// }
+
+.logo {
+  position: absolute;
   width: 100vw;
   height: 100vh;
-  position: absolute;
+}
+
+#bottom-nav {
+  background: url('../img/bottom-nav.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 section {
-  height: 100vh;
-    width: 3000px; /* relative to parent -> 25% of 400% = 100% of window width */
-    float: left;
+  height: 811px;
+  width: 3000px;
+  float: left;
 }
 
 /* 3. Content ================================= */
@@ -67,44 +77,410 @@ section {
 }
 
 #slide-wrap {
-  width: 500%; /* to contain 5 panels, each with 100% of window width */
-  height: 100%;
-  overflow: hidden;
+  
 }
 
 .panel {
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #panel--one {
   background: url('../img/background.png');
   background-size: auto auto;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 #panel--one-second {
   background: url('../img/background1.png');
   background-size: auto auto;
-  baclground-repeat: none;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
+
+#panel--one-third {
+  background: url('../img/background1.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel-content-one {
+  color: $white;
+  width: auto;
+  height: 100%;
+  position: relative;
+  
+  h2 {
+    position: absolute;
+    top: 210px;
+    left: 300px;
+  }
+
+  p.left {
+    position: absolute;
+    top: 305px;
+    left: 300px;
+    width: 500px;
+    line-height: 1.8;
+
+    b {
+      font-weight: bold;
+    }
+  }
+
+  h1 {
+    position: absolute;
+    top: 131px;
+    left: 1500px;
+    font-size: 5.1em;
+  }
+
+  h6 {
+    position: absolute;
+    top: 111px;
+    left: 1500px;
+    color: $dark-purple;
+  }
+
+  h4 {
+    position: absolute;
+    top: 131px;
+    left: 1500px;
+  }
+
+  p.right {
+    position: absolute;
+    left: 1500px;
+    top: 225px;
+    width: 200px;
+    color: $dark-purple;
+  }
+
+  .album-wrap {
+    position: absolute;
+    height: auto;
+    width: auto;
+    float: left;
+    left: 1600px;
+    top: 500px;
+
+    .album-1 {
+      background: url(../img/album-cover.png);
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 100px;
+      float: left;    
+    }
+
+    .album-description {
+      max-width: 350px;
+      color: $black;
+      float: left;
+      padding: 25px;
+    }
+  }
+
+  .album-2 {
+    background: url('../img/spaceoddity-cover.png');
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    left: 2000px;
+    top: 350px;
+    position: absolute;
+  }
+
+  .album-3 {
+    background: url('../img/mwstw-cover.png');
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    left: 2350px;
+    top: 350px;
+    position: absolute;
+  }
+
+}
+
+.bowie-cutout {
+  height: 100%;
+  width: 100%;
+  background: url('../img/bowie-cutout.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+.bowie-shadow {
+  height: 100%;
+  width: 100%;
+  background: url(../img/bowie-shadow.png);
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  z-index: -1;
+  left: 50%;
+  transform: translate(-14%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel-content-2 {
+  color: $white;
+  width: auto;
+  height: 100%;
+  position: relative;
+
+  p.left {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    width: 500px;
+    line-height: 2;
+  }
+
+  h3 {
+    position: absolute;
+    top: 100px;
+    left: 1500px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 120px;
+    left: 1500px;
+    text-shadow: 5px 5px 0px #5273ff;
+    font-size: 5.1em;
+  }
+
+  p.right:nth-of-type(2) {
+    top: 230px;
+    line-height: 2;
+  }
+
+  p.right {
+    position: absolute;
+    top: 640px;
+    left: 1500px;
+    max-width: 300px;
+  }
+
+  h2 {
+    position: absolute;
+    top: 450px;
+    left: 1500px;
+    max-width: 250px;
+  }
+
+  h5 {
+    position: absolute;
+    top: 600px;
+    left: 1500px;
+  }
+}
+
+#ziggy {
+  position: absolute;
+  top: -500px;
+  left: -500px;
+}
+
+.ziggy-cutout {
+  height: 100%;
+  width: 100%;
+  background: url('../img/bowie-sd.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+.costume-1 {
+  position: absolute;
+  left: 1850px;
+  top: 380px;
+  height: 100%;
+  width: 100%;
+  background: url('../img/starman-suit.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+.costume-2 {
+  position: absolute;
+  left: 2000px;
+  top: 380px;
+  height: 100%;
+  width: 100%;
+  background: url('../img/poofy-legs.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+.costume-3 {
+  max-height: 317px;
+  position: absolute;
+  left: 2250px;
+  top: 380px;
+  height: 100%;
+  width: 100%;
+  background: url('../img/jumpsuit.png');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel-content-3 {
+  
+  h1 {
+    font-size: 5.1em;
+    position: absolute;
+    top: 120px;
+    left: 400px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #panel--two {
   background: url('../img/background2.png');
   background-size: auto auto;
+  background-repeat: no-repeat;
 }
 
 #panel--three {
   background: url('../img/background3.png');
   background-size: auto auto;
+  background-repeat: no-repeat;
 }
 
 #panel--four {
   background: url('../img/background4.png');
   background-size: auto auto;
-}
-
-
-h1 {
-  color: white;
+  background-repeat: no-repeat;
 }
 
 #start {
