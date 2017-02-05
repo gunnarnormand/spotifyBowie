@@ -33,6 +33,10 @@ TABLE OF CONTENTS:
   font-family: 'FuturaTOT-Demi';
   src: url("../fonts/FuturaTOT-Demi.otf") format("opentype"); }
 
+@font-face {
+  font-family: 'FuturaTOT-Book';
+  src: url("../fonts/FuturaTOT-Book.otf") format("opentype"); }
+
 .clearfix:before,
 .clearfix:after {
   content: ' ';
@@ -108,19 +112,17 @@ a {
   height: 25vh; }
 
 #loader-overlay {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
   background: white;
-  opacity: 1;
-  -webkit-transition-property: opacity, transform;
-  -moz-transition-property: opacity, transform;
-  -o-transition-property: opacity, transform;
-  -ms-transition-property: opacity, transform;
-  transition-property: opacity, transform;
+  -webkit-transition-property: opacity, z-index;
+  -moz-transition-property: opacity, z-index;
+  -o-transition-property: opacity, z-index;
+  -ms-transition-property: opacity, z-index;
+  transition-property: opacity, z-index;
   -webkit-transition-duration: .3s;
   -moz-transition-duration: .3s;
   -o-transition-duration: .3s;
@@ -136,10 +138,12 @@ a {
   -o-transition-timing-function: ease;
   -ms-transition-timing-function: ease;
   transition-timing-function: ease;
-  will-change: opacity, transform; }
+  will-change: opacity, z-index; }
 
 .loader-overlay {
-  position: relative; }
+  position: relative;
+  opacity: 1;
+  z-index: 1000; }
 
 .loader-center {
   position: absolute;
@@ -149,7 +153,7 @@ a {
 
 .loaded {
   opacity: 0;
-  transform: translateY(-100%); }
+  z-index: -1000; }
 
 .centered {
   text-align: center; }
@@ -728,10 +732,8 @@ section {
     height: auto;
     text-align: left;
     position: absolute;
-    top: 510px;
-    left: 1705px; }
-    .panel-content-4 .didymus h3 {
-      text-align: right; }
+    top: 325px;
+    left: 2150px; }
   .panel-content-4 .didymus-img {
     width: 142px;
     height: 142px;
@@ -739,17 +741,15 @@ section {
     background-size: auto auto;
     background-repeat: no-repeat;
     position: absolute;
-    top: 510px;
-    left: 1740px; }
+    top: 320px;
+    left: 2000px; }
   .panel-content-4 .sarah {
     max-width: 300px;
     height: auto;
     text-align: left;
     position: absolute;
-    top: 510px;
-    left: 1705px; }
-    .panel-content-4 .sarah h3 {
-      text-align: right; }
+    top: 525px;
+    left: 2125px; }
   .panel-content-4 .sarah-img {
     width: 142px;
     height: 142px;
@@ -757,8 +757,110 @@ section {
     background-size: auto auto;
     background-repeat: no-repeat;
     position: absolute;
-    top: 510px;
-    left: 1740px; }
+    top: 525px;
+    left: 1965px; }
+
+.logo-2 {
+  width: 30vw;
+  height: 30vh;
+  margin-bottom: -30px; }
+  .logo-2:hover {
+    cursor: pointer; }
+
+footer {
+  color: #fff;
+  text-align: center; }
+  footer h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 2.5px 2.5px 0px #8a71ae, 5px 5px 0px #1f102f; }
+  footer p {
+    font-family: "FuturaTOT-Book";
+    font-size: 20px; }
+  footer a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transition-property: border-bottom, color;
+    -moz-transition-property: border-bottom, color;
+    -o-transition-property: border-bottom, color;
+    -ms-transition-property: border-bottom, color;
+    transition-property: border-bottom, color;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    will-change: border-bottom, color; }
+    footer a:hover {
+      color: #8a71ae;
+      border-bottom: 2px solid #8a71ae; }
+  footer input {
+    max-width: 375px;
+    width: 375px;
+    min-height: 50px;
+    background-color: rgba(134, 241, 219, 0.5);
+    border-radius: 7px;
+    border: none;
+    display: block;
+    margin: 11px auto;
+    padding-left: 20px;
+    -webkit-transition-property: padding-left, background-color;
+    -moz-transition-property: padding-left, background-color;
+    -o-transition-property: padding-left, background-color;
+    -ms-transition-property: padding-left, background-color;
+    transition-property: padding-left, background-color;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    will-change: padding-left, background-color; }
+    footer input:focus {
+      outline-offset: none;
+      outline: none;
+      padding-left: 15px;
+      background-color: rgba(134, 241, 219, 0.8); }
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+  font-family: "FuturaTOT-Book"; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+  font-family: "FuturaTOT-Book"; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+  font-family: "FuturaTOT-Book"; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+  font-family: "FuturaTOT-Book"; }
 
 #panel--two {
   background: url("../img/background2.png");
@@ -775,7 +877,15 @@ section {
   background-size: auto auto;
   background-repeat: no-repeat; }
 
+#panel--five {
+  background: transparent;
+  height: 100vh;
+  width: 100vw; }
+
 #end {
+  opacity: 0; }
+
+#end-2 {
   opacity: 0; }
 
 /*# sourceMappingURL=main.css.map */
