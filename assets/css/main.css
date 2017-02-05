@@ -30,8 +30,8 @@ TABLE OF CONTENTS:
   src: url("../fonts/ApexSerif_Book.otf") format("opentype"); }
 
 @font-face {
-  font-family: 'Futura-Bold';
-  src: url("../fonts/FuturaTOT-Bold.otf") format("opentype"); }
+  font-family: 'FuturaTOT-Demi';
+  src: url("../fonts/FuturaTOT-Demi.otf") format("opentype"); }
 
 .clearfix:before,
 .clearfix:after {
@@ -99,7 +99,65 @@ p {
 a {
   text-decoration: none; }
 
+#second, #third {
+  visibility: hidden; }
+
+#loader {
+  display: block;
+  width: 25vw;
+  height: 25vh; }
+
+#loader-overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: white;
+  opacity: 1;
+  -webkit-transition-property: opacity, transform;
+  -moz-transition-property: opacity, transform;
+  -o-transition-property: opacity, transform;
+  -ms-transition-property: opacity, transform;
+  transition-property: opacity, transform;
+  -webkit-transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  -ms-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  transition-timing-function: ease;
+  will-change: opacity, transform; }
+
+.loader-overlay {
+  position: relative; }
+
+.loader-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.loaded {
+  opacity: 0;
+  transform: translateY(-100%); }
+
+.centered {
+  text-align: center; }
+
 /* 2. Main Layout ================================= */
+html {
+  background: #8a71ae; }
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -171,37 +229,43 @@ section {
   height: 100%;
   position: relative; }
   .panel-content-one h2 {
+    font-size: 34px;
+    text-shadow: 3px 3px 0px #1f102f;
     position: absolute;
     top: 210px;
     left: 300px; }
   .panel-content-one p.left {
+    font-size: 18px;
     position: absolute;
     top: 305px;
     left: 300px;
     width: 500px;
     line-height: 1.8; }
     .panel-content-one p.left b {
+      font-size: 20px;
       font-weight: bold; }
   .panel-content-one h1 {
+    font-size: 78px;
     position: absolute;
     top: 131px;
     left: 1500px;
-    font-size: 5.1em; }
+    font-size: 5.1em;
+    padding-top: 10px; }
   .panel-content-one h6 {
+    font-size: 30px;
     position: absolute;
     top: 111px;
     left: 1500px;
     color: #1f102f; }
-  .panel-content-one h4 {
-    position: absolute;
-    top: 131px;
-    left: 1500px; }
   .panel-content-one p.right {
+    font-size: 18px;
     position: absolute;
     left: 1500px;
     top: 225px;
-    width: 200px;
-    color: #1f102f; }
+    width: 300px;
+    color: #1f102f;
+    padding-top: 10px;
+    line-height: 1.5; }
   .panel-content-one .album-wrap {
     position: absolute;
     height: auto;
@@ -215,8 +279,11 @@ section {
       background-repeat: no-repeat;
       height: 100px;
       width: 100px;
-      float: left; }
+      float: left;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
     .panel-content-one .album-wrap .album-description {
+      font-size: 12px;
+      line-height: 1.7;
       max-width: 350px;
       color: #2d2d2d;
       float: left;
@@ -229,7 +296,8 @@ section {
     width: 100px;
     left: 2000px;
     top: 350px;
-    position: absolute; }
+    position: absolute;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
   .panel-content-one .album-3 {
     background: url("../img/mwstw-cover.png");
     background-size: auto auto;
@@ -238,7 +306,8 @@ section {
     width: 100px;
     left: 2350px;
     top: 350px;
-    position: absolute; }
+    position: absolute;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .bowie-cutout {
   height: 100%;
@@ -263,43 +332,54 @@ section {
   height: 100%;
   position: relative; }
   .panel-content-2 p.left {
+    font-family: "Futura-Bold";
     position: absolute;
-    top: 100px;
-    left: 400px;
-    width: 500px;
-    line-height: 2; }
+    top: 350px;
+    left: 250px;
+    width: 600px;
+    line-height: 2;
+    font-size: 21px; }
   .panel-content-2 h3 {
     position: absolute;
     top: 100px;
-    left: 1500px; }
+    left: 1800px; }
   .panel-content-2 h1 {
     position: absolute;
     top: 120px;
-    left: 1500px;
+    left: 1775px;
     text-shadow: 5px 5px 0px #5273ff;
     font-size: 5.1em; }
   .panel-content-2 p.right:nth-of-type(2) {
     top: 230px;
-    line-height: 2; }
+    left: 1800px;
+    font-family: "Futura-Bold"; }
   .panel-content-2 p.right {
     position: absolute;
-    top: 640px;
+    top: 600px;
     left: 1500px;
-    max-width: 300px; }
+    max-width: 300px;
+    line-height: 2;
+    font-family: "ApexSerif-Book";
+    font-size: 15px; }
   .panel-content-2 h2 {
     position: absolute;
     top: 450px;
     left: 1500px;
-    max-width: 250px; }
+    max-width: 350px; }
   .panel-content-2 h5 {
     position: absolute;
-    top: 600px;
+    top: 530px;
     left: 1500px; }
 
-#ziggy {
+.ziggy {
   position: absolute;
-  top: -500px;
-  left: -500px; }
+  top: 100px;
+  left: 300px;
+  width: 550px;
+  height: 287px;
+  background: url(../img/ziggy.png);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .ziggy-cutout {
   height: 100%;
@@ -308,9 +388,18 @@ section {
   background-size: auto auto;
   background-repeat: no-repeat; }
 
+#lightning-big {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%); }
+
 .costume-1 {
   position: absolute;
-  left: 1850px;
+  left: 1880px;
   top: 380px;
   height: 100%;
   width: 100%;
@@ -320,7 +409,7 @@ section {
 
 .costume-2 {
   position: absolute;
-  left: 2000px;
+  left: 2080px;
   top: 380px;
   height: 100%;
   width: 100%;
@@ -331,13 +420,345 @@ section {
 .costume-3 {
   max-height: 317px;
   position: absolute;
-  left: 2250px;
+  left: 2360px;
   top: 380px;
   height: 100%;
   width: 100%;
   background: url("../img/jumpsuit.png");
   background-size: auto auto;
   background-repeat: no-repeat; }
+
+.panel-content-3 {
+  color: #2d2d2d;
+  width: auto;
+  height: 100%;
+  position: relative; }
+  .panel-content-3 p {
+    font-family: "Futura-Demi";
+    font-size: 24px; }
+  .panel-content-3 h1 {
+    color: #fff;
+    font-size: 4em;
+    position: absolute;
+    top: 120px;
+    left: 600px; }
+  .panel-content-3 p.left {
+    max-width: 475px;
+    position: absolute;
+    top: 200px;
+    left: 620px; }
+  .panel-content-3 .song-1 {
+    max-width: 500px;
+    position: absolute;
+    top: 300px;
+    left: 550px; }
+    .panel-content-3 .song-1 .song-1-img {
+      height: 80px;
+      width: 80px;
+      background: url("../img/oddity-cover.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      float: left; }
+    .panel-content-3 .song-1 p {
+      float: left;
+      padding: 25px; }
+    .panel-content-3 .song-1 svg {
+      float: left;
+      height: 30px;
+      width: 30px;
+      margin: 15px; }
+  .panel-content-3 .song-2 {
+    max-width: 500px;
+    position: absolute;
+    top: 400px;
+    left: 550px; }
+    .panel-content-3 .song-2 .song-2-img {
+      height: 80px;
+      width: 80px;
+      background: url("../img/hunkydory-cover.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      float: left; }
+    .panel-content-3 .song-2 p {
+      float: left;
+      padding: 25px; }
+    .panel-content-3 .song-2 svg {
+      float: left;
+      height: 30px;
+      width: 30px;
+      margin: 15px; }
+  .panel-content-3 .song-3 {
+    max-width: 500px;
+    position: absolute;
+    top: 500px;
+    left: 550px; }
+    .panel-content-3 .song-3 .song-3-img {
+      height: 80px;
+      width: 80px;
+      background: url("../img/diamond-dogs.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      float: left; }
+    .panel-content-3 .song-3 p {
+      float: left;
+      padding: 25px; }
+    .panel-content-3 .song-3 svg {
+      float: left;
+      height: 30px;
+      width: 30px;
+      margin: 15px; }
+  .panel-content-3 .song-4 {
+    max-width: 500px;
+    position: absolute;
+    top: 300px;
+    left: 1050px; }
+    .panel-content-3 .song-4 .song-4-img {
+      height: 80px;
+      width: 80px;
+      background: url("../img/stardust-cover.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      float: left; }
+    .panel-content-3 .song-4 p {
+      float: left;
+      padding: 25px; }
+    .panel-content-3 .song-4 svg {
+      float: left;
+      height: 30px;
+      width: 30px;
+      margin: 15px; }
+  .panel-content-3 .song-5 {
+    max-width: 500px;
+    position: absolute;
+    top: 400px;
+    left: 1050px; }
+    .panel-content-3 .song-5 .song-5-img {
+      height: 80px;
+      width: 80px;
+      background: url("../img/heroes-cover.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      float: left; }
+    .panel-content-3 .song-5 p {
+      float: left;
+      padding: 25px; }
+    .panel-content-3 .song-5 svg {
+      float: left;
+      height: 30px;
+      width: 30px;
+      margin: 15px; }
+  .panel-content-3 .box {
+    width: 700px;
+    height: 500px;
+    position: absolute; }
+  .panel-content-3 .purple-2 {
+    top: 120px;
+    left: 1740px;
+    background: #8a71ae; }
+  .panel-content-3 .purple-1 {
+    top: 110px;
+    left: 1720px;
+    background: #442c62; }
+  .panel-content-3 .now-playing {
+    top: 100px;
+    left: 1700px;
+    background: #1f102f;
+    color: #fff; }
+    .panel-content-3 .now-playing h3 {
+      text-transform: uppercase;
+      text-shadow: 3px 3px 0px #1f102f;
+      font-size: 28px;
+      text-align: center;
+      padding: 25px; }
+    .panel-content-3 .now-playing .nowplaying-img {
+      height: 157px;
+      width: 157px;
+      background: url("../img/nowplaying-img.png");
+      background-size: auto auto;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+      left: 50%;
+      position: relative; }
+    .panel-content-3 .now-playing h6 {
+      font-size: 22px;
+      text-align: center;
+      padding: 20px; }
+    .panel-content-3 .now-playing svg {
+      height: 10%;
+      width: 10%;
+      transform: translateX(-50%);
+      left: 39%;
+      position: relative; }
+    .panel-content-3 .now-playing p {
+      font-size: 18px;
+      font-family: "Futura-Demi";
+      text-align: left;
+      padding: 25px;
+      line-height: 1.5; }
+
+.panel-content-4 {
+  color: #fff;
+  width: auto;
+  height: 100%;
+  position: relative; }
+  .panel-content-4 .labyrinth-img {
+    background: url(../img/labyrinth-logo.png);
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    height: 157px;
+    width: 687px;
+    position: absolute;
+    top: 36%;
+    left: 24%;
+    transform: translate(-50%, -50%); }
+  .panel-content-4 .labyrinth-text {
+    max-width: 687px;
+    font-size: 18px;
+    font-family: "Futura-Demi";
+    text-align: left;
+    padding: 25px;
+    line-height: 1.5;
+    position: absolute;
+    top: 60%;
+    left: 24%;
+    transform: translate(-50%, -50%); }
+  .panel-content-4 h1 {
+    font-size: 135px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 70px;
+    left: 2077px; }
+  .panel-content-4 h2 {
+    font-family: "FuturaTOT-Demi";
+    font-size: 50px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 200px;
+    left: 2025px; }
+  .panel-content-4 h6 {
+    font-family: "ApexSerif-Book";
+    font-size: 17px;
+    position: absolute;
+    top: 260px;
+    left: 2025px; }
+  .panel-content-4 .jareth-cutout {
+    height: 100%;
+    width: 100%;
+    background: url("../img/jareth-cutout.png");
+    background-size: auto auto;
+    background-repeat: no-repeat; }
+  .panel-content-4 h3 {
+    font-family: "Futura-Medi";
+    font-size: 38px;
+    color: #8a71ae;
+    text-transform: uppercase; }
+  .panel-content-4 p {
+    max-width: 300px;
+    font-family: "ApexSerif-Book";
+    font-size: 14px; }
+  .panel-content-4 .jareth-heading {
+    position: absolute;
+    top: 560px;
+    left: 1680px;
+    font-size: 52px; }
+  .panel-content-4 .jareth-text {
+    position: absolute;
+    top: 625px;
+    left: 1620px; }
+  .panel-content-4 .hoggle {
+    max-width: 333px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    top: 110px;
+    left: 1200px; }
+    .panel-content-4 .hoggle h3 {
+      text-align: right; }
+    .panel-content-4 .hoggle p {
+      max-width: 333px; }
+  .panel-content-4 .hoggle-img {
+    width: 142px;
+    height: 142px;
+    background: url("../img/Hoggle.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 110px;
+    left: 1540px; }
+  .panel-content-4 .ludo {
+    max-width: 245px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    top: 285px;
+    left: 1131px; }
+    .panel-content-4 .ludo h3 {
+      text-align: right; }
+  .panel-content-4 .ludo-img {
+    width: 142px;
+    height: 142px;
+    background: url(../img/ludo.png);
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 285px;
+    left: 1380px; }
+  .panel-content-4 .worm {
+    max-width: 333px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    top: 510px;
+    left: 1110px; }
+    .panel-content-4 .worm h3 {
+      text-align: right; }
+    .panel-content-4 .worm p {
+      max-width: 333px; }
+  .panel-content-4 .worm-img {
+    width: 142px;
+    height: 142px;
+    background: url("../img/worm.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 510px;
+    left: 1440px; }
+  .panel-content-4 .didymus {
+    max-width: 300px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    top: 510px;
+    left: 1705px; }
+    .panel-content-4 .didymus h3 {
+      text-align: right; }
+  .panel-content-4 .didymus-img {
+    width: 142px;
+    height: 142px;
+    background: url("../img/sir-didymus.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 510px;
+    left: 1740px; }
+  .panel-content-4 .sarah {
+    max-width: 300px;
+    height: auto;
+    text-align: left;
+    position: absolute;
+    top: 510px;
+    left: 1705px; }
+    .panel-content-4 .sarah h3 {
+      text-align: right; }
+  .panel-content-4 .sarah-img {
+    width: 142px;
+    height: 142px;
+    background: url("../img/sarah.png");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 510px;
+    left: 1740px; }
 
 #panel--two {
   background: url("../img/background2.png");
