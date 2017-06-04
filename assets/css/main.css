@@ -179,9 +179,16 @@ iframe {
   z-index: -1; }
 
 .logo {
+  width: 50vw;
+  height: 50vh;
   position: absolute;
-  width: 100vw;
-  height: 100vh; }
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 section {
   height: 811px;
@@ -754,6 +761,7 @@ section {
     left: 1965px; }
 
 .logo-2 {
+  overflow: visible !important;
   width: 30vw;
   height: 30vh;
   margin-bottom: -30px; }
@@ -914,22 +922,48 @@ footer {
 #end-2 {
   opacity: 0; }
 
-.bottom-nav-1 {
-  position: absolute;
-  width: 100vw;
-  height: auto;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; }
+.nav-img-active {
+  filter: grayscale(0%) !important;
+  transform: scale(1.2); }
 
 .bottom-nav {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
   z-index: 2;
   height: auto;
-  width: auto; }
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(0.7);
+  -moz-transform: translateX(-50%) scale(0.7);
+  -o-transform: translateX(-50%) scale(0.7);
+  -ms-transform: translateX(-50%) scale(0.7);
+  transform: translateX(-50%) scale(0.7);
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .bottom-nav div {
+    margin: 0 1em;
+    -webkit-transition-property: transform, -webkit-filter;
+    -moz-transition-property: transform, -moz-filter;
+    -o-transition-property: transform, -o-filter;
+    -ms-transition-property: transform, -ms-filter;
+    transition-property: transform, filter;
+    -webkit-transition-duration: .25s, .5s;
+    -moz-transition-duration: .25s, .5s;
+    -o-transition-duration: .25s, .5s;
+    -ms-transition-duration: .25s, .5s;
+    transition-duration: .25s, .5s;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    -ms-transition-delay: 0s;
+    transition-delay: 0s;
+    -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
+    -moz-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
+    -o-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
+    -ms-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
+    transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1.5), ease;
+    will-change: transform, filter; }
   .bottom-nav .nav-1-img {
     filter: grayscale(100%);
     height: 78px;
@@ -937,11 +971,10 @@ footer {
     border-radius: 50%;
     background: url("../img/nav-1.png");
     background-size: auto auto;
-    background-repeat: no-repeat;
-    float: left;
-    padding: 0 5px; }
+    background-repeat: no-repeat; }
     .bottom-nav .nav-1-img:hover {
-      filter: grayscale(0%); }
+      filter: grayscale(0%);
+      cursor: pointer; }
   .bottom-nav .nav-2-img {
     filter: grayscale(100%);
     height: 78px;
@@ -949,11 +982,10 @@ footer {
     border-radius: 50%;
     background: url("../img/nav-2.png");
     background-size: auto auto;
-    background-repeat: no-repeat;
-    float: left;
-    padding: 0 5px; }
+    background-repeat: no-repeat; }
     .bottom-nav .nav-2-img:hover {
-      filter: grayscale(0%); }
+      filter: grayscale(0%);
+      cursor: pointer; }
   .bottom-nav .nav-3-img {
     filter: grayscale(100%);
     height: 78px;
@@ -961,11 +993,10 @@ footer {
     border-radius: 50%;
     background: url("../img/nav-3.png");
     background-size: auto auto;
-    background-repeat: no-repeat;
-    float: left;
-    padding: 0 5px; }
+    background-repeat: no-repeat; }
     .bottom-nav .nav-3-img:hover {
-      filter: grayscale(0%); }
+      filter: grayscale(0%);
+      cursor: pointer; }
   .bottom-nav .nav-4-img {
     filter: grayscale(100%);
     height: 78px;
@@ -973,10 +1004,9 @@ footer {
     border-radius: 50%;
     background: url("../img/nav-4.png");
     background-size: auto auto;
-    background-repeat: no-repeat;
-    float: left;
-    padding: 0 5px; }
+    background-repeat: no-repeat; }
     .bottom-nav .nav-4-img:hover {
-      filter: grayscale(0%); }
+      filter: grayscale(0%);
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */
