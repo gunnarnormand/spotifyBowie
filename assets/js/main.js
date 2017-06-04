@@ -2,7 +2,6 @@ console.log("main.js");
 
 $(document).ready(function(){
 
-
 		function changeText(newtext) {
 		  $(".start-scrolling").text(newtext)
 		}
@@ -22,18 +21,12 @@ $(document).ready(function(){
 			.from(".panel-content-one h1", .75, {y: '-100%', ease: Power0.easeNone}, "-=.25")
 			.from(".panel-content-one p.right", .75, {y: '-100%', ease: Power0.easeNone}, "-=.25");
 
-			// .from(".album-wrap", .5, {y: '-100%', ease: Power0.easeNone}, "-=.5")
-			// .from(".album-wrap", .5, {y: '-100%', ease: Power0.easeNone}, "-=.5")
-			// .from(".album-wrap", .5, {y: '-100%', ease: Power0.easeNone}, "-=.5");
-
-
 			var panel5Timeline = new TimelineMax()
 				.staggerFrom("footer h1", 1, {y: window.innerHeight, ease: Back.easeOut.config(1.7)})
 				.staggerFrom("footer .p1", 1, {y: window.innerHeight, ease: Back.easeOut.config(1.7)}, "-=1")
 				.staggerFrom("footer form.f1", 1, {y: window.innerHeight, ease: Back.easeOut.config(1.7)}, "-=1")
 				.staggerFrom("footer form.f2", 1, {y: window.innerHeight, ease: Back.easeOut.config(1.7)}, "-=1")
 				.staggerFrom("footer .p2", 1, {y: window.innerHeight, ease: Back.easeOut.config(1.7)}, "-=1");
-
 	
 		var masterTimeline = new TimelineMax()
 			
@@ -79,12 +72,6 @@ $(document).ready(function(){
 			.call(changeText, ["go back"]);
 
 
-
-
-
-
-
-
 		// create scene to pin and link animation
 		new ScrollMagic.Scene({
 				triggerElement: "#main-wrap",
@@ -93,30 +80,9 @@ $(document).ready(function(){
 			})
 			.setPin("#main-wrap")
 			.setTween(masterTimeline)
-			.addIndicators()
+			// .addIndicators()
 			.addTo(controller);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var scene = new ScrollMagic.Scene({
-// 					triggerElement: "#panel--one-third", 
-// 					duration: 300
-// 				})
-// 				.setPin("#nav")
-// 				.addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
-// 				.addTo(controller);
-
 
 
 
