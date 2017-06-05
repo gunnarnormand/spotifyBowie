@@ -24,8 +24,13 @@ $(document).ready(function(){
 
 	var scrollingIndicatorTimeline = new TimelineMax({repeat: -1});
 	scrollingIndicatorTimeline
-		.to("#scroll-icon-top", .5, {morphSVG:"#scroll-icon-bottom", shapeIndex:0, ease: Circ.easeOut},  "+=1")
-	   	.to("#scroll-icon-top", .5, {morphSVG:"#scroll-icon-top", shapeIndex:0, ease: Circ.easeOut}, "+=1");			   				   	
+		.from("#scroll-icon-top", .25, {autoAlpha:0, yPercent:-100, force3D:true, ease: Circ.easeOut},  "+=1")
+
+		.to("#scroll-icon-top", .5, {morphSVG:"#scroll-icon-bottom", ease: Circ.easeOut},  "+=1")
+
+	   	.to("#scroll-icon-top", .5, {morphSVG:"#scroll-icon-top", ease: Circ.easeOut}, "+=1")
+
+	   	.to("#scroll-icon-top", .25, {autoAlpha:0, yPercent:100, force3D:true, ease: Circ.easeOut},  "+=1");			   				   	
 
 
 	$('.logo-2').on('click', function() {

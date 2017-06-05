@@ -1,9 +1,11 @@
 {
-  "name": "circus-starter",
+  "name": "spotifyBowie",
   "version": "1.0.0",
   "description": "interactive teams project one",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "parallax-js": "git+https://github.com/wagerfield/parallax.git"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",

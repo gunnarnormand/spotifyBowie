@@ -375,6 +375,10 @@ section {
   transform: translate(-50%, -50%);
 }
 
+#bolt2, #bolt3 {
+  opacity: 0;
+}
+
 .costume-1 {
   position: absolute;
   left: 1880px;
@@ -466,11 +470,19 @@ section {
     left: 620px;
   }
 
+  .song {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .song-1 {
     max-width: 500px;
     position: absolute;
     top: 300px;
     left: 550px;
+    
 
     .song-1-img {
       height: 80px;
@@ -478,19 +490,19 @@ section {
       background: url('../img/oddity-cover.png'); 
       background-size: auto auto;
       background-repeat: no-repeat;
-      float: left;
     }
 
     p {
-      float: left;
       padding: 25px;
     }
 
     svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -506,19 +518,19 @@ section {
       background: url('../img/hunkydory-cover.png');
       background-size: auto auto;
       background-repeat: no-repeat;
-      float: left;
     }
 
     p {
-      float: left;
       padding: 25px;
     }
 
     svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -534,19 +546,19 @@ section {
       background: url('../img/diamond-dogs.png');
       background-size: auto auto;
       background-repeat: no-repeat;
-      float: left;
     }
 
     p {
-      float: left;
       padding: 25px;
     }
 
     svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -562,19 +574,19 @@ section {
       background: url('../img/stardust-cover.png');
       background-size: auto auto;
       background-repeat: no-repeat;
-      float: left;
     }
 
     p {
-      float: left;
       padding: 25px;
     }
 
     svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -590,19 +602,19 @@ section {
       background: url('../img/heroes-cover.png');
       background-size: auto auto;
       background-repeat: no-repeat;
-      float: left;
     }
 
     p {
-      float: left;
       padding: 25px;
     }
 
     svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -661,6 +673,9 @@ section {
       transform: translateX(-50%);
       left: 39%;
       position: relative;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
 
     p {
@@ -701,14 +716,47 @@ section {
 
 
 
+#scene {
+  
+}
 
 
 
 
+.border-hover {
+  border: 5px solid $light-purple !important; 
 
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  -ms-transition-property: border;
+  transition-property: border;
 
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
 
+  -webkit-transition-delay:  0s;
+  -moz-transition-delay:  0s;
+  -o-transition-delay:  0s;
+  -ms-transition-delay:  0s;
+  transition-delay:  0s;
 
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  transition-timing-function: ease;
+
+  will-change: border;
+}
+
+.lab-img-hover {
+  height: auto !important;
+  overflow: visible;  
+}
 
 .panel-content-4 {
   color: $white;
@@ -720,12 +768,18 @@ section {
     background: url(../img/labyrinth-logo.png);
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     height: 157px;
     width: 687px;
     position: absolute;
     top: 36%;
     left: 24%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
     transform: translate(-50%, -50%);
+
   }
 
   .labyrinth-text {
@@ -738,6 +792,10 @@ section {
     position: absolute;
     top: 60%;
     left: 24%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
@@ -801,12 +859,16 @@ section {
   }
 
   .hoggle {
+    height: 0;
+    overflow: hidden;
+
     max-width: 333px;
-    height: auto;
     text-align: left;
     position: absolute;
     top: 110px;
     left: 1200px;
+
+
 
     h3 {
       text-align: right;
@@ -818,11 +880,14 @@ section {
   }
 
   .hoggle-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url('../img/Hoggle.png');
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 110px;
     left: 1540px;
@@ -830,7 +895,8 @@ section {
 
   .ludo {
     max-width: 245px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 285px;
@@ -842,11 +908,14 @@ section {
   }
 
   .ludo-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url(../img/ludo.png);
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 285px;
     left: 1380px;
@@ -854,7 +923,8 @@ section {
 
   .worm {
     max-width: 333px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 510px;
@@ -870,11 +940,14 @@ section {
   }
 
   .worm-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url('../img/worm.png');
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 510px;
     left: 1440px;
@@ -882,7 +955,8 @@ section {
 
   .didymus {
     max-width: 300px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 325px;
@@ -890,11 +964,14 @@ section {
   }
 
   .didymus-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url('../img/sir-didymus.png');
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 320px;
     left: 2000px;
@@ -902,7 +979,8 @@ section {
 
   .sarah {
     max-width: 300px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 525px;
@@ -910,11 +988,14 @@ section {
   }
 
   .sarah-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url('../img/sarah.png');
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 525px;
     left: 1965px;
@@ -1193,8 +1274,7 @@ footer {
 
 
 .nav-img-active {
-  filter: grayscale(0%) !important; 
-  transform: scale(1.2);
+  filter: grayscale(0%) !important;
 }
 
 .bottom-nav {
@@ -1218,17 +1298,17 @@ footer {
   div {
     margin: 0 1em;
 
-    -webkit-transition-property: transform, -webkit-filter;
-    -moz-transition-property: transform, -moz-filter;
-    -o-transition-property: transform, -o-filter;
-    -ms-transition-property: transform, -ms-filter;
-    transition-property: transform, filter;
+    -webkit-transition-property: -webkit-filter;
+    -moz-transition-property: -moz-filter;
+    -o-transition-property: -o-filter;
+    -ms-transition-property: -ms-filter;
+    transition-property: filter;
 
-    -webkit-transition-duration: .25s, .5s;
-    -moz-transition-duration: .25s, .5s;
-    -o-transition-duration: .25s, .5s;
-    -ms-transition-duration: .25s, .5s;
-    transition-duration: .25s, .5s;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    transition-duration: .5s;
 
     -webkit-transition-delay:  0s;
     -moz-transition-delay:  0s;
@@ -1236,13 +1316,13 @@ footer {
     -ms-transition-delay:  0s;
     transition-delay:  0s;
 
-    -webkit-transition-timing-function:  cubic-bezier(.1,.5,.5,1), ease ;
-    -moz-transition-timing-function:  cubic-bezier(.1,.5,.5,1), ease ;
-    -o-transition-timing-function:  cubic-bezier(.1,.5,.5,1), ease ;
-    -ms-transition-timing-function:  cubic-bezier(.1,.5,.5,1), ease ;
-    transition-timing-function:  cubic-bezier(.1,.5,.5,1.5), ease ;
+    -webkit-transition-timing-function:  cubic-bezier(.1,.5,.5,1);
+    -moz-transition-timing-function:  cubic-bezier(.1,.5,.5,1);
+    -o-transition-timing-function:  cubic-bezier(.1,.5,.5,1);
+    -ms-transition-timing-function:  cubic-bezier(.1,.5,.5,1);
+    transition-timing-function:  cubic-bezier(.1,.5,.5,1.5);
     
-    will-change: transform, filter;
+    will-change: filter;
 
   }
 

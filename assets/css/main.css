@@ -401,6 +401,9 @@ section {
   left: 44%;
   transform: translate(-50%, -50%); }
 
+#bolt2, #bolt3 {
+  opacity: 0; }
+
 .costume-1 {
   position: absolute;
   left: 1880px;
@@ -451,6 +454,11 @@ section {
     position: absolute;
     top: 200px;
     left: 620px; }
+  .panel-content-3 .song {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
   .panel-content-3 .song-1 {
     max-width: 500px;
     position: absolute;
@@ -461,16 +469,15 @@ section {
       width: 80px;
       background: url("../img/oddity-cover.png");
       background-size: auto auto;
-      background-repeat: no-repeat;
-      float: left; }
+      background-repeat: no-repeat; }
     .panel-content-3 .song-1 p {
-      float: left;
       padding: 25px; }
     .panel-content-3 .song-1 svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px; }
+      .panel-content-3 .song-1 svg:hover {
+        cursor: not-allowed; }
   .panel-content-3 .song-2 {
     max-width: 500px;
     position: absolute;
@@ -481,16 +488,15 @@ section {
       width: 80px;
       background: url("../img/hunkydory-cover.png");
       background-size: auto auto;
-      background-repeat: no-repeat;
-      float: left; }
+      background-repeat: no-repeat; }
     .panel-content-3 .song-2 p {
-      float: left;
       padding: 25px; }
     .panel-content-3 .song-2 svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px; }
+      .panel-content-3 .song-2 svg:hover {
+        cursor: not-allowed; }
   .panel-content-3 .song-3 {
     max-width: 500px;
     position: absolute;
@@ -501,16 +507,15 @@ section {
       width: 80px;
       background: url("../img/diamond-dogs.png");
       background-size: auto auto;
-      background-repeat: no-repeat;
-      float: left; }
+      background-repeat: no-repeat; }
     .panel-content-3 .song-3 p {
-      float: left;
       padding: 25px; }
     .panel-content-3 .song-3 svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px; }
+      .panel-content-3 .song-3 svg:hover {
+        cursor: not-allowed; }
   .panel-content-3 .song-4 {
     max-width: 500px;
     position: absolute;
@@ -521,16 +526,15 @@ section {
       width: 80px;
       background: url("../img/stardust-cover.png");
       background-size: auto auto;
-      background-repeat: no-repeat;
-      float: left; }
+      background-repeat: no-repeat; }
     .panel-content-3 .song-4 p {
-      float: left;
       padding: 25px; }
     .panel-content-3 .song-4 svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px; }
+      .panel-content-3 .song-4 svg:hover {
+        cursor: not-allowed; }
   .panel-content-3 .song-5 {
     max-width: 500px;
     position: absolute;
@@ -541,16 +545,15 @@ section {
       width: 80px;
       background: url("../img/heroes-cover.png");
       background-size: auto auto;
-      background-repeat: no-repeat;
-      float: left; }
+      background-repeat: no-repeat; }
     .panel-content-3 .song-5 p {
-      float: left;
       padding: 25px; }
     .panel-content-3 .song-5 svg {
-      float: left;
       height: 30px;
       width: 30px;
       margin: 15px; }
+      .panel-content-3 .song-5 svg:hover {
+        cursor: not-allowed; }
   .panel-content-3 .box {
     width: 700px;
     height: 500px;
@@ -593,12 +596,42 @@ section {
       transform: translateX(-50%);
       left: 39%;
       position: relative; }
+      .panel-content-3 .now-playing svg:hover {
+        cursor: not-allowed; }
     .panel-content-3 .now-playing p {
       font-size: 18px;
       font-family: "Futura-Demi";
       text-align: left;
       padding: 25px;
       line-height: 1.5; }
+
+.border-hover {
+  border: 5px solid #8a71ae !important;
+  -webkit-transition-property: border;
+  -moz-transition-property: border;
+  -o-transition-property: border;
+  -ms-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  -ms-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  -ms-transition-timing-function: ease;
+  transition-timing-function: ease;
+  will-change: border; }
+
+.lab-img-hover {
+  height: auto !important;
+  overflow: visible; }
 
 .panel-content-4 {
   color: #fff;
@@ -609,11 +642,16 @@ section {
     background: url(../img/labyrinth-logo.png);
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     height: 157px;
     width: 687px;
     position: absolute;
     top: 36%;
     left: 24%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   .panel-content-4 .labyrinth-text {
     max-width: 687px;
@@ -625,6 +663,10 @@ section {
     position: absolute;
     top: 60%;
     left: 24%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   .panel-content-4 h1 {
     font-size: 135px;
@@ -670,8 +712,9 @@ section {
     top: 625px;
     left: 1620px; }
   .panel-content-4 .hoggle {
+    height: 0;
+    overflow: hidden;
     max-width: 333px;
-    height: auto;
     text-align: left;
     position: absolute;
     top: 110px;
@@ -681,17 +724,21 @@ section {
     .panel-content-4 .hoggle p {
       max-width: 333px; }
   .panel-content-4 .hoggle-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url("../img/Hoggle.png");
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 110px;
     left: 1540px; }
   .panel-content-4 .ludo {
     max-width: 245px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 285px;
@@ -699,17 +746,21 @@ section {
     .panel-content-4 .ludo h3 {
       text-align: right; }
   .panel-content-4 .ludo-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url(../img/ludo.png);
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 285px;
     left: 1380px; }
   .panel-content-4 .worm {
     max-width: 333px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 510px;
@@ -719,43 +770,54 @@ section {
     .panel-content-4 .worm p {
       max-width: 333px; }
   .panel-content-4 .worm-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url("../img/worm.png");
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 510px;
     left: 1440px; }
   .panel-content-4 .didymus {
     max-width: 300px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 325px;
     left: 2150px; }
   .panel-content-4 .didymus-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url("../img/sir-didymus.png");
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 320px;
     left: 2000px; }
   .panel-content-4 .sarah {
     max-width: 300px;
-    height: auto;
+    height: 0;
+    overflow: hidden;
     text-align: left;
     position: absolute;
     top: 525px;
     left: 2125px; }
   .panel-content-4 .sarah-img {
+    border: 5px solid transparent;
+    border-radius: 50%;
     width: 142px;
     height: 142px;
     background: url("../img/sarah.png");
     background-size: auto auto;
     background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 525px;
     left: 1965px; }
@@ -923,8 +985,7 @@ footer {
   opacity: 0; }
 
 .nav-img-active {
-  filter: grayscale(0%) !important;
-  transform: scale(1.2); }
+  filter: grayscale(0%) !important; }
 
 .bottom-nav {
   z-index: 2;
@@ -943,27 +1004,27 @@ footer {
   justify-content: center; }
   .bottom-nav div {
     margin: 0 1em;
-    -webkit-transition-property: transform, -webkit-filter;
-    -moz-transition-property: transform, -moz-filter;
-    -o-transition-property: transform, -o-filter;
-    -ms-transition-property: transform, -ms-filter;
-    transition-property: transform, filter;
-    -webkit-transition-duration: .25s, .5s;
-    -moz-transition-duration: .25s, .5s;
-    -o-transition-duration: .25s, .5s;
-    -ms-transition-duration: .25s, .5s;
-    transition-duration: .25s, .5s;
+    -webkit-transition-property: -webkit-filter;
+    -moz-transition-property: -moz-filter;
+    -o-transition-property: -o-filter;
+    -ms-transition-property: -ms-filter;
+    transition-property: filter;
+    -webkit-transition-duration: .5s;
+    -moz-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    -ms-transition-duration: .5s;
+    transition-duration: .5s;
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
     -o-transition-delay: 0s;
     -ms-transition-delay: 0s;
     transition-delay: 0s;
-    -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
-    -moz-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
-    -o-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
-    -ms-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1), ease;
-    transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1.5), ease;
-    will-change: transform, filter; }
+    -webkit-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1);
+    -moz-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1);
+    -ms-transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1);
+    transition-timing-function: cubic-bezier(0.1, 0.5, 0.5, 1.5);
+    will-change: filter; }
   .bottom-nav .nav-1-img {
     filter: grayscale(100%);
     height: 78px;
