@@ -139,6 +139,22 @@ a {
   -ms-transition-timing-function: ease;
   transition-timing-function: ease;
   will-change: opacity, z-index; }
+  #loader-overlay .show {
+    display: block; }
+  #loader-overlay h2 {
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1em;
+    font-size: 1em;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 .loader-overlay {
   position: relative;

@@ -12,9 +12,18 @@ MorphSVGPlugin.convertToPath("#scroll-icon-bottom");
 
 $(document).ready(function(){
 
-	setTimeout(function(){
-  		$('.loader-overlay').addClass('loaded');	
-	}, 4000);
+	if (window.innerWidth < 415) {
+		console.log('view on desktop browser plz');
+		$('.loader-overlay h2').addClass('show');
+	} else {
+		setTimeout(function(){
+	  		$('.loader-overlay').addClass('loaded');	
+		}, 4000);
+	}
+
+	// setTimeout(function(){
+ //  		$('.loader-overlay').addClass('loaded');	
+	// }, 4000);
 
 	var loadingTimeline = new TimelineMax();
 	loadingTimeline
@@ -36,6 +45,20 @@ $(document).ready(function(){
 	$('.logo-2').on('click', function() {
 		TweenMax.to("#start-2", 1, {morphSVG:{shape:"#end-2", shapeIndex:28}, ease: Elastic.easeOut.config(1, 0.3)});
 		TweenMax.to("#start-2", 1, {fill: '#fff', ease: Circ.easeOut});
+	});
+
+
+	$(".nav-1-img").on('click', function() {
+		TweenMax.to(window, 1, {scrollTo:{y: document.body.scrollHeight * 0.087}});
+	});
+	$(".nav-2-img").on('click', function() {
+		TweenMax.to(window, 1, {scrollTo:{y: document.body.scrollHeight * 0.275}});
+	});
+	$(".nav-3-img").on('click', function() {
+		TweenMax.to(window, 1, {scrollTo:{y: document.body.scrollHeight * 0.485}});
+	});
+	$(".nav-4-img").on('click', function() {
+		TweenMax.to(window, 1, {scrollTo:{y: document.body.scrollHeight * 0.692}});
 	});
 	
 	
